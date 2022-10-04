@@ -1,9 +1,9 @@
-
+import Loader from './components/Loader/Loader';
 
 function App() {
   return (
     <div>
-      Hello world
+      <Loader />
     </div>
   );
 }
