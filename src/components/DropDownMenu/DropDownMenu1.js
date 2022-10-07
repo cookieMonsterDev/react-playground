@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 
-const DropDownMenu = () => {
+const DropDownMenu1 = () => {
   const [active, setActive] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ const DropDownMenu = () => {
   );
 };
 
-export default DropDownMenu;
+export default DropDownMenu1;
 
 const Window = styled.div`
   width: 100vw;
