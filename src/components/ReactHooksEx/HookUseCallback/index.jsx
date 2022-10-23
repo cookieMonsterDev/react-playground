@@ -13,11 +13,11 @@ const HookUseCallback = () => {
 
   const handleClick1 = useCallback(() => {
     setCounter1((prev) => prev + 1);
-  }, [counter1]);
+  }, []);
 
   const handleClick2 = useCallback(() => {
     setCounter2((prev) => prev + 1);
-  }, [counter2]);
+  }, []);
 
   return (
     <div>

@@ -2,11 +2,11 @@ import React from 'react';
 import { Context } from './Context';
 import Element from './Element';
 
+// Use context allows to reach prop from context in each element in context
+
 const HookUseContext = () => {
   return (
     <Context>
-      {/* <button onClick={action}> change state</button>
-      <div>{state ? 'true' : 'false'}</div> */}
       <Element />
     </Context>
   );
