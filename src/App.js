@@ -1,11 +1,12 @@
 // import Loader from './components/Loader/Loader';
 // import DropDownMenu1 from './components/DropDownMenu/DropDownMenu1';
-import DropDowns from './components/DropDownMenu/index';
+import HookUseCallback from './components/ReactHooksEx/HookUseCallback';
+import HookUseReducer from './components/ReactHooksEx/HookUseReducer';
 
 function App() {
   return (
     <div>
-      <DropDowns />
+      <HookUseCallback />
     </div>
   );
 }
