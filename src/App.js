@@ -3,11 +3,12 @@
 // import HookUseCallback from './components/ReactHooksEx/HookUseCallback';
 // import HookUseContext from './components/ReactHooksEx/HookUseContext';
 // import HookUseReducer from "./components/ReactHooksEx/HookUseReducer";
+import HookUseOutside from "./components/ReactCustomHooksEx/HookUseOutside";
 
 function App() {
   return (
     <div>
-      
+      <HookUseOutside />
     </div>
   );
 }
