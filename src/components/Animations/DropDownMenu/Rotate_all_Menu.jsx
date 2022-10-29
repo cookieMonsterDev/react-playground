@@ -1,13 +1,13 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
-const RotateEachMenu = ({ list }) => {
+const RotateAllMenu = ({ list }) => {
   return (
     <MenuContainer>
       Rotate
       <List>
         {list.map((item, key) => (
-          <ListItem style={{ animationDelay: `${100 * key}ms` }} key={key}>
+          <ListItem key={key}>
             {item}
           </ListItem>
         ))}
@@ -16,7 +16,7 @@ const RotateEachMenu = ({ list }) => {
   );
 };
 
-export default RotateEachMenu;
+export default RotateAllMenu;
 
 const Anim = keyframes`
    0% {
@@ -43,10 +43,8 @@ const MenuContainer = styled.div`
   box-sizing: border-box;
 
   &:hover {
-    > ul > li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    > ul {
+      visibility: visible;
       opacity: 0;
       animation: ${Anim} 300ms ease-in-out forwards;
     }
@@ -60,6 +58,7 @@ const List = styled.ul`
   left: 0;
   width: 100%;
   padding: 0;
+  visibility: hidden;
 `;
 
 const ListItem = styled.li`
@@ -68,5 +67,7 @@ const ListItem = styled.li`
   background: #666;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

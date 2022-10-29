@@ -4,6 +4,11 @@ import TranslateXEachMenu from './TranslateX_each_Menu';
 import ScaleEachMenu from './Scale_each_Menu';
 import RotateEachMenu from './Rotate_each_Menu';
 import TranslateZEachMenu from './TranslateZ_each_Menu';
+import TranslateYAllMenu from './TranslateY_all_Menu';
+import TranslateXAllMenu from './TranslateX_all_Menu';
+import ScaleAllMenu from './Scale_all_Menu';
+import RotateAllMenu from './Rotate_all_Menu';
+import TranslateZAllMenu from './TranslateZ_all_Menu';
 
 const dataList = ['Item-1', 'Item-2', 'Item-3'];
 
@@ -31,8 +36,21 @@ const DropDowns = () => {
 
       <h1>Animate the Whole Menu</h1>
       <List>
-        <ListItem></ListItem>
-        <ListItem></ListItem>
+        <ListItem>
+          <TranslateYAllMenu list={dataList} />
+        </ListItem>
+        <ListItem>
+          <TranslateXAllMenu list={dataList} />
+        </ListItem>
+        <ListItem>
+          <ScaleAllMenu list={dataList} />
+        </ListItem>
+        <ListItem>
+          <RotateAllMenu list={dataList} />
+        </ListItem>
+        <ListItem>
+          <TranslateZAllMenu list={dataList} />
+        </ListItem>
       </List>
     </Window>
   );

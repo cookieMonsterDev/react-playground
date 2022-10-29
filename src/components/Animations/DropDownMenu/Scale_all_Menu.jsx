@@ -1,13 +1,13 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
-const RotateEachMenu = ({ list }) => {
+const ScaleAllMenu = ({ list }) => {
   return (
     <MenuContainer>
-      Rotate
+      Scale
       <List>
         {list.map((item, key) => (
-          <ListItem style={{ animationDelay: `${100 * key}ms` }} key={key}>
+          <ListItem key={key}>
             {item}
           </ListItem>
         ))}
@@ -16,16 +16,20 @@ const RotateEachMenu = ({ list }) => {
   );
 };
 
-export default RotateEachMenu;
+export default ScaleAllMenu;
 
 const Anim = keyframes`
-   0% {
+  0% {
     opacity: 0;
-    transform: rotateY(-90deg);
+    transform: scale(0);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1.2);
   }
   100% {
     opacity: 1;
-    transform: rotateY(0deg);
+    transform: scale(1);
   }
 `;
 
@@ -43,10 +47,8 @@ const MenuContainer = styled.div`
   box-sizing: border-box;
 
   &:hover {
-    > ul > li {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    > ul {
+      visibility: visible;
       opacity: 0;
       animation: ${Anim} 300ms ease-in-out forwards;
     }
@@ -60,6 +62,7 @@ const List = styled.ul`
   left: 0;
   width: 100%;
   padding: 0;
+  visibility: hidden;
 `;
 
 const ListItem = styled.li`
@@ -68,5 +71,7 @@ const ListItem = styled.li`
   background: #666;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
