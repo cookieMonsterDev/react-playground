@@ -4,12 +4,13 @@
 // import HookUseContext from './components/ReactHooksEx/HookUseContext';
 // import HookUseReducer from "./components/ReactHooksEx/HookUseReducer";
 // import HookUseOutside from "./components/ReactCustomHooksEx/HookUseOutside";
-import DropDowns from "./components/Animations/DropDownMenu";
+// import DropDowns from "./components/Animations/DropDownMenu";
+import SearchList from "./components/PatternComponents/SearchList/SearchList";
 
 function App() {
   return (
     <div>
-      <DropDowns />
+      <SearchList />
     </div>
   );
 }
