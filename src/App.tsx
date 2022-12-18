@@ -7,7 +7,7 @@
 // import DropDowns from "./components/Animations/DropDownMenu";
 import SearchList from "./components/PatternComponents/SearchList/SearchList";
 
-function App() {
+const App = () => {
   return (
     <div>
       <SearchList />
