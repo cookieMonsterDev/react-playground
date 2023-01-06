@@ -7,7 +7,7 @@
 // import DropDowns from "./components/Animations/DropDownMenu";
 // import SearchList from "./components/PatternComponents/SearchList/SearchList";
 import TestPage from "./pages/testPage";
-import TestPage2 from "./pages/testPage2";
+// import TestPage2 from "./pages/testPage2";
 
 const App = () => {
   return (

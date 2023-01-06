@@ -1,8 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import React, { useState } from 'react';
 import useAxios from '../components/ReactCustomHooksEx/HookUseAxios/index';
 
+interface Data {
+  title: string
+}
+
 const TestPage = () => {
-  const [state, setState] = useState(1);
+  const [state, setState] = useState(100);
 
   const { data, error, loading } = useAxios({
     method: 'get',
@@ -11,8 +15,12 @@ const TestPage = () => {
 
   return (
     <div>
-      <div>{loading ? 'loading...' : data.title}</div>
-      <button onClick={() => setState((prev) => prev + 1)}>plus 1</button>
+      <div>{loading ? 'loading...' : (data as Data).title}</div>
+      <br />
+      <div>{error ? 'some error' : 'no error'}</div>
+      <br />
+      <button onClick={() => setState((prev) => prev + 1)}>+1</button>
+      <button onClick={() => setState((prev) => prev - 1)}>-1</button>
     </div>
   );
 };
