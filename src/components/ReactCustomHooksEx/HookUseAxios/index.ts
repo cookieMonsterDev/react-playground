@@ -10,7 +10,7 @@ interface useAxiosTypes<T> {
 
 const useAxios = <T = any>({ method, url, body, config }: useAxiosTypes<T>) => {
   const [data, setData] = useState<T>();
-  const [error, setError] = useState<T>();
+  const [error, setError] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

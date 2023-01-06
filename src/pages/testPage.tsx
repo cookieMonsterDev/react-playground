@@ -1,17 +1,13 @@
 import React, { useCallback, useState } from 'react';
 import useAxios from '../components/ReactCustomHooksEx/HookUseAxios/index';
 
-
-
 const TestPage = () => {
-  const [state, setState] = useState(10000);
+  const [state, setState] = useState(1);
 
   const { data, error, loading } = useAxios({
     method: 'get',
     url: `https://jsonplaceholder.typicode.com/posts/${state}`,
   });
-
-  console.log(error)
 
   return (
     <div>

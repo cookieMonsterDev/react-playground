@@ -5,8 +5,9 @@
 // import HookUseReducer from "./components/ReactHooksEx/HookUseReducer";
 // import HookUseOutside from "./components/ReactCustomHooksEx/HookUseOutside";
 // import DropDowns from "./components/Animations/DropDownMenu";
-import TestPage from "./pages/testPage";
 // import SearchList from "./components/PatternComponents/SearchList/SearchList";
+import TestPage from "./pages/testPage";
+import TestPage2 from "./pages/testPage2";
 
 const App = () => {
   return (
