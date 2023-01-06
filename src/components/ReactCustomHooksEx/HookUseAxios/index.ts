@@ -5,7 +5,7 @@ interface useAxiosTypes<T> {
   method: 'get' | 'post' | 'put' | 'delete' | 'patch';
   url: string;
   body?: T;
-  config?: AxiosRequestConfig<any> | undefined;
+  config?: AxiosRequestConfig<any>;
 }
 
 type Cache<T> = { [url: string]: T }
