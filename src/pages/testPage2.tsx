@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import useFetch from '../components/ReactCustomHooksEx/HookUseFetch';
+import useFetch from '../Hooks/ReactCustomHooksEx/HookUseFetch';
 
 const TestPage2 = () => {
   const [state, setState] = useState(1);

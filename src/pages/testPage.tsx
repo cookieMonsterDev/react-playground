@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import useAxios from '../components/ReactCustomHooksEx/HookUseAxios/index';
+import useAxios from '../Hooks/ReactCustomHooksEx/HookUseAxios/index';
 
 interface Data {
   title: string
