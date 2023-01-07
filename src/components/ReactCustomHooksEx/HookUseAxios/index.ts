@@ -8,14 +8,14 @@ interface useAxiosTypes<T> {
   config?: AxiosRequestConfig<any>;
 }
 
-type Cache<T> = { [url: string]: T }
+type Cache<T> = { [url: string]: T };
 
 const useAxios = <T = any>({ method, url, body, config }: useAxiosTypes<T>) => {
   const [data, setData] = useState<T>();
   const [error, setError] = useState<T | null>(null);
   const [loading, setLoading] = useState(true);
   const cancelRequest = useRef<boolean>(false);
-  const cache = useRef<Cache<T>>({})
+  const cache = useRef<Cache<T>>({});
 
   useEffect(() => {
     if (!url) return;
@@ -26,13 +26,14 @@ const useAxios = <T = any>({ method, url, body, config }: useAxiosTypes<T>) => {
       setLoading(true);
 
       if (cache.current[url]) {
-        setData(cache.current[url])
-        return
+        setData(cache.current[url]);
+        setLoading(false);
+        return;
       }
 
       try {
         const { data } = await axios[method](url, body, config);
-        cache.current[url] = data
+        cache.current[url] = data;
         if (cancelRequest.current) return;
 
         setData(data);
