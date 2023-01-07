@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.scss';
 
-const FileInput = () => {
+const ImageInput = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files![0]
@@ -25,4 +25,4 @@ const FileInput = () => {
   );
 };
 
-export default FileInput;
+export default ImageInput;

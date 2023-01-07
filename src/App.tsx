@@ -9,12 +9,12 @@
 // import TestPage2 from "./pages/testPage2";
 // import HookUseEffect from "./components/ReactHooksEx/HookUseEffect";
 // import DropDowns from './components/Animations/DropDownMenu'
-import FileInput from './components/FileInput'
+import ImageInput from './components/ImageInput'
 
 const App = () => {
   return (
     <div>
-      <FileInput />
+      <ImageInput />
     </div>
   );
 }
