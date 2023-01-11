@@ -1,0 +1,26 @@
+.list {
+  width: 500px;
+  height: 600px;
+  list-style: none;
+  background-color: rgb(239, 242, 242);
+  border: 1px solid rgb(206, 206, 206);
+  border-radius: 6px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background: rgb(206, 206, 206);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgb(170, 170, 170);
+  }
+}

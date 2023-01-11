@@ -9,12 +9,14 @@
 // import TestPage2 from "./pages/testPage2";
 // import HookUseEffect from "./components/ReactHooksEx/HookUseEffect";
 // import DropDowns from './components/Animations/DropDownMenu'
-import ImageInput from './components/ImageInput'
+// import ImageInput from './components/PatternComponents/ImageInput'
+
+import ShowMoreList from "./components/PatternComponents/ShowMoreList";
 
 const App = () => {
   return (
     <div>
-      <ImageInput />
+      <ShowMoreList />
     </div>
   );
 }
