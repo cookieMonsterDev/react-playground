@@ -30,6 +30,7 @@ function ShowMoreList() {
 
   return (
     <div className="wrapper">
+      <div className='list-wrapper'>
       <ul className="list">
         {defList.map((i, j) => {
           return (
@@ -47,6 +48,7 @@ function ShowMoreList() {
             );
           })}
       </ul>
+      </div>
       <button onClick={() => setExpanded((prev) => !prev)}>
         {expanded ? 'Show less' : 'Show more'}
       </button>

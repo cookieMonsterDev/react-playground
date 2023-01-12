@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { ListData } from '../index';
 import '../style/card.scss';
 
@@ -16,19 +17,35 @@ function Card({
   index,
   animation,
 }: ListDataMod) {
+
+  const [expanded, setExpanded] = useState(false);
+
   return (
+    <>
     <div
-      className="list-card"
+      className={animation ? `list-card` : `list-card no-animation`}
       style={animation ? { animationDelay: `${250 * index}ms` } : {}}
     >
-      <section></section>
       <section>
-        <div className="list-card__btn">
-          <span />
-        </div>
+        <img
+          src={require(`../data/img/${photo}`)}
+          alt={name}
+          className="list-card__image"
+        />
+        <ul className="list-card__data-list">
+          <li>{name}</li>
+          <li>{position}</li>
+        </ul>
+        <hr className="list-card__stripe" />
       </section>
-      <hr className="list-card__stripe" />
+      <section>
+        <span className="list-card__btn" onClick={() => setExpanded(true)}>
+          <div />
+        </span>
+      </section>
     </div>
+    <div className={expanded ? 'sth open' : `sth`} onClick={() => setExpanded(false)}></div>
+    </>
   );
 }
 

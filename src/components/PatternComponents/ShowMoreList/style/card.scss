@@ -1,10 +1,11 @@
+@import './global.scss';
+
 .list-card {
   height: 100px;
   opacity: 0;
-  position: relative;
   animation: appearance 250ms ease-in-out forwards;
   display: flex;
-  
+
   > section {
     display: flex;
     justify-content: center;
@@ -12,23 +13,20 @@
 
     &:nth-child(1) {
       flex: 80;
+      justify-content: flex-start;
+      position: relative;
     }
 
     &:nth-child(2) {
       flex: 20;
-      position: relative;
-
-      > div {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-      }
     }
   }
-  
- }
+}
+
+.no-animation {
+  opacity: 1;
+  animation: none;
+}
 
 @keyframes appearance {
   0% {
@@ -43,42 +41,100 @@
 
 .list-card__stripe {
   position: absolute;
-  left: 50%;
+  left: 10px;
   bottom: 5px;
-  width: 95%;
+  width: 120%;
   height: 1px;
-  transform: translate(-50%);
-  background-color: black;
+  background-color: $primaryColor;
 }
 
-.list-card__btn{
-  > span {
+.list-card__btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+
+  > div {
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35px;
+    width: 100%;
     height: 4px;
-    background-color: black;
+    background-color: $primaryColor;
+    transition: 700ms;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: -200%;
-      width: 35px;
+      width: 100%;
       height: 4px;
-      background-color: black;
+      background-color: $primaryColor;
+      transition: 700ms;
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 200%;
-      width: 35px;
+      width: 100%;
       height: 4px;
-      background-color: black;
+      background-color: $primaryColor;
+      transition: 700ms;
+    }
+  }
+
+  &:hover {
+    > div {
+      background-color: $secondaryColor;
+
+      &::before {
+        background-color: $secondaryColor;
+      }
+
+      &::after {
+        background-color: $secondaryColor;
+      }
     }
   }
 }
 
+.list-card__image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-position: top;
+  object-fit: cover;
+  margin-left: 15px;
+}
+
+.list-card__data-list {
+  margin-left: 15px;
+  @include font;
+
+  > li {
+    &:nth-child(1) {
+      font-weight: 800;
+    }
+  }
+}
+
+.sth {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  position: absolute;
+  background-color: red;
+  scale: 0.3;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1000ms;
+}
+
+.open {
+  visibility: visible;
+  scale: 1;
+  opacity: 1;
+}
 
