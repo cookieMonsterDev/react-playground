@@ -11,12 +11,12 @@
 // import DropDowns from './components/Animations/DropDownMenu'
 // import ImageInput from './components/PatternComponents/ImageInput'
 
-import ShowMoreList from "./components/PatternComponents/ShowMoreList";
+import Logo from "./components/Animations/logoAnimation";
 
 const App = () => {
   return (
     <div>
-      <ShowMoreList />
+      <Logo />
     </div>
   );
 }
