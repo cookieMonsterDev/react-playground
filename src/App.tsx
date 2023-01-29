@@ -10,13 +10,17 @@
 // import HookUseEffect from "./components/ReactHooksEx/HookUseEffect";
 // import DropDowns from './components/Animations/DropDownMenu'
 // import ImageInput from './components/PatternComponents/ImageInput'
-
-import Logo from "./components/Animations/logoAnimation";
+// import Logo from "./components/Animations/logoAnimation";
+import Notification from "./components/Animations/Notification/Notification";
+import { useState } from 'react'
 
 const App = () => {
+  const [state, setState] = useState({message: 'Somesthing went wrong'})
+
   return (
     <div>
-      <Logo />
+      <Notification text={state}/>
+      <button onClick={() => setState({message: 'Somesthing went wrong'})}>Update text</button>
     </div>
   );
 }
