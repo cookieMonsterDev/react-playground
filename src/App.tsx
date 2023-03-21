@@ -11,18 +11,14 @@
 // import DropDowns from './components/Animations/DropDownMenu'
 // import ImageInput from './components/PatternComponents/ImageInput'
 // import Logo from "./components/Animations/logoAnimation";
-import Notification from "./components/Animations/Notification/Notification";
-import { useState } from 'react'
+import TestPage3 from './pages/testPage3';
 
 const App = () => {
-  const [state, setState] = useState({message: 'Somesthing went wrong'})
-
   return (
     <div>
-      <Notification text={state}/>
-      <button onClick={() => setState({message: 'Somesthing went wrong'})}>Update text</button>
+
     </div>
   );
-}
+};
 
 export default App;

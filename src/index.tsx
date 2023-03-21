@@ -7,10 +7,18 @@ import App from './App';
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
+// root.render(
+//   <StrictMode>
+//     <Provider store={store}>
+//         <App />
+//     </Provider>
+//   </StrictMode>
+// );
+
 root.render(
   <StrictMode>
-    {/* <Provider store={store}> */}
-        <App />
-    {/* </Provider> */}
+    <App />
   </StrictMode>
 );
+
+// root.render(<App />);
