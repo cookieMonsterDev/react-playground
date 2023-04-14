@@ -11,12 +11,13 @@
 // import DropDowns from './components/Animations/DropDownMenu'
 // import ImageInput from './components/PatternComponents/ImageInput'
 // import Logo from "./components/Animations/logoAnimation";
-import TestPage3 from './pages/testPage3';
+import EachLetterInText from './components/Animations/EachLetterInText/EachLetterInText';
+
 
 const App = () => {
   return (
     <div>
-
+      <EachLetterInText />
     </div>
   );
 };
