@@ -1,0 +1,17 @@
+* {
+  font-size: 30px;
+}
+
+h1 {
+  all: unset;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card {
+  display: flex;
+}
