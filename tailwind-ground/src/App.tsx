@@ -17,7 +17,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      <div className="text">
+      <div className="text-end text-lg">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam corrupti
         expedita natus. Mollitia ea autem iusto veniam cupiditate dignissimos
         dolorem iste. Aliquid nisi mollitia reprehenderit aperiam ab, asperiores
