@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 body {
-  @apply bg-color-primary text-color-white tracking-wider
+  @apply bg-color-primary text-color-white tracking-wider;
+}
+
+.btn {
+  @apply bg-color-secondary px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200;
 }

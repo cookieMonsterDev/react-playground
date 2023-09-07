@@ -1,9 +1,9 @@
-import Site from "./components";
+import LightCode from "./sites/LightCode";
 
 function App() {
   return (
     <>
-      <Site />
+      <LightCode />
     </>
   );
 }
