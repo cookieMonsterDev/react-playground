@@ -1,12 +1,13 @@
 
 import styled from 'styled-components';
-import ProgressCircle from './components/PatternComponents/ProgressCircle';
+
+import Skeleton from './components/Animations/Skeleton/Skeleton';
 
 
 const App = () => {
   return (
     <Window>
-      <ProgressCircle min={10} max={66} current={20}/>
+      <Skeleton style={{width: "100px", height: "100px"}}/>
     </Window>
   );
 };
